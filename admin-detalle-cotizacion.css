@@ -1,0 +1,798 @@
+/* ===== ADMIN DETALLE COTIZACIÓN - ESTILOS ===== */
+
+.cotizacion-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.header-cotizacion {
+    background: linear-gradient(135deg, #3c609f, #4472c4);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titulo-grande {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 5px;
+}
+
+/* REGLAS GENERALES PARA INFO-CARD */
+.info-card {
+    background: #f8f9ff;
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 4px solid #3c609f;
+    font-size: 16px;
+}
+
+.info-card h3 {
+    color: #3c609f;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+/* REGLAS ESPECÍFICAS PARA LAS TARJETAS DEL GRID (más compactas) */
+.info-grid .info-card {
+    padding: 20px;
+    margin-bottom: 0;
+    font-size: 15px;
+}
+
+.info-grid .info-card h3 {
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.info-grid .info-card .info-label {
+    font-size: 15px;
+    width: 130px;
+}
+
+.info-grid .info-card .info-input {
+    font-size: 15px;
+    padding: 7px 10px;
+}
+
+.info-row {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.info-label {
+    font-weight: bold;
+    width: 150px;
+    color: #333;
+    font-size: 16px;
+}
+
+.info-value {
+    flex: 1;
+    color: #666;
+    font-size: 16px;
+}
+
+.info-input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #3c609f;
+    border-radius: 4px;
+    font-size: 16px;
+    background: white;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+.info-input:focus {
+    outline: none;
+    border-color: #2d4a7f;
+    box-shadow: 0 0 5px rgba(60, 96, 159, 0.3);
+}
+
+.productos-form {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.producto-header {
+    background: #3c609f;
+    color: white;
+    padding: 15px 20px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.producto-item {
+    border-bottom: 1px solid #eee;
+    padding: 20px;
+    margin-bottom: 40px;
+    overflow: visible;
+}
+
+/* ===== MODIFICACIÓN PARA LAYOUT HORIZONTAL DEL PRODUCTO ===== */
+.producto-info {
+    display: grid;
+    grid-template-columns: 80px auto auto;
+    gap: 20px;
+    margin-bottom: 20px;
+    align-items: start;
+    justify-content: start; /* Alineación a la izquierda */
+}
+
+.producto-detalles {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.producto-linea-principal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.producto-codigo-area {
+    margin-bottom: 0;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+
+.producto-nombre-metodo-area {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex: 1;
+    min-width: 200px;
+}
+
+.producto-img-area {
+    width: 80px;
+    flex-shrink: 0;
+}
+
+.producto-stock-area {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.producto-comentarios-area {
+    margin-top: 5px; /* Menos margen, más cerca del código */
+}
+
+.producto-img-link {
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.producto-img-link:hover {
+    opacity: 0.8;
+}
+
+.producto-nombre-link {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.producto-nombre-link:hover {
+    color: #3c609f;
+    text-decoration: underline;
+}
+
+.comentarios-label {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    color: #3c609f;
+    margin-bottom: 5px;
+}
+
+.comentarios-textarea {
+    width: 100%;
+    min-height: 30px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: inherit;
+    resize: vertical;
+    background: white;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+.comentarios-textarea:focus {
+    outline: none;
+    border-color: #3c609f;
+    box-shadow: 0 0 5px rgba(60, 96, 159, 0.3);
+}
+
+.comentarios-textarea::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+.producto-img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.producto-codigo {
+    font-weight: bold;
+    color: #3c609f;
+    text-decoration: none;
+}
+
+.producto-nombre {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.producto-metodo-impresion {
+    font-size: 14px;
+    color: #666;
+    font-style: italic;
+    background: #f0f8ff;
+    padding: 3px 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    display: inline-block;
+}
+
+.producto-variante {
+    color: #666;
+    font-style: italic;
+    font-size: 14px;
+}
+
+/* Regla removida - ahora los comentarios son editables */
+
+.campos-edicion {
+    display: grid;
+    grid-template-columns: 70px 90px 120px 90px 60px 240px 260px 120px 100px 80px;
+    gap: 10px;
+    margin-bottom: 10px;
+    align-items: end;
+}
+
+.campo-grupo {
+    background: #f8f9ff;
+    padding: 8px;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+}
+
+.campo-label {
+    display: block;
+    font-weight: bold;
+    font-size: 12px;
+    color: #3c609f;
+    margin-bottom: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.campo-input {
+    width: 100%;
+    padding: 5px 6px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.campo-input[type="number"] {
+    text-align: right;
+}
+
+.campo-input select {
+    font-size: 13px;
+}
+
+.campo-readonly {
+    background: #f5f5f5;
+    color: #666;
+}
+
+.campo-editable {
+    border-color: #3c609f;
+    background: white;
+}
+
+.campo-editable:focus {
+    outline: none;
+    border-color: #2d4a7f;
+    box-shadow: 0 0 5px rgba(60, 96, 159, 0.3);
+}
+
+.stock-info {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.stock-ok { 
+    background: #d4edda; 
+    color: #155724; 
+}
+
+.stock-bajo { 
+    background: #fff3cd; 
+    color: #856404; 
+}
+
+.stock-sin { 
+    background: #f8d7da; 
+    color: #721c24; 
+}
+
+.resultados-calculo {
+    background: #e8f4fd;
+    padding: 8px;
+    border-radius: 3px;
+    margin-top: 8px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 6px;
+    font-size: 10px;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: visible;
+}
+
+.resultado-item {
+    text-align: center;
+    padding: 3px;
+    background: white;
+    border-radius: 2px;
+}
+
+.resultado-label {
+    display: block;
+    font-weight: bold;
+    color: #3c609f;
+    font-size: 8px;
+    margin-bottom: 1px;
+}
+
+.resultado-valor {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.resultado-row span:first-child {
+    font-size: 12px;
+    font-weight: bold;
+    color: #3c609f;
+    white-space: nowrap;
+    margin-bottom: 2px;
+}
+
+.resultado-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6px 2px;
+    background: #d4edda;
+    border: 1px solid #c3e6cb;
+    border-radius: 3px;
+    text-align: center;
+    min-height: 50px;
+    justify-content: center;
+    box-sizing: border-box;
+    overflow: visible;
+}
+
+.resultado-row span:last-child {
+    font-size: 13px;
+    font-weight: bold;
+    color: #333;
+    white-space: nowrap;
+    line-height: 1.2;
+}
+
+.resultado-total {
+    background: #d4edda !important;
+    border: 1px solid #c3e6cb;
+}
+
+.alerta-ganancia {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    color: #856404;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.alerta-stock {
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.alerta-stock-dinamica {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    color: #856404;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.advertencia-costos {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    color: #856404;
+    padding: 8px;
+    border-radius: 4px;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.btn-primary { 
+    background: #3c609f; 
+    color: white; 
+}
+
+.btn-success { 
+    background: #28a745; 
+    color: white; 
+}
+
+.btn-secondary { 
+    background: #6c757d; 
+    color: white; 
+}
+
+.btn-warning { 
+    background: #ffc107; 
+    color: #333; 
+}
+
+.btn:hover { 
+    opacity: 0.8; 
+    transform: translateY(-1px); 
+}
+
+.acciones-footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    background: #f8f9ff;
+    border-radius: 8px;
+}
+
+.mensaje {
+    background: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #c3e6cb;
+}
+
+.error {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #f5c6cb;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    .cotizacion-container {
+        margin: 10px;
+        padding: 15px;
+    }
+    
+    .header-cotizacion {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .info-grid .info-card {
+        padding: 25px;
+        font-size: 16px;
+    }
+    
+    .info-grid .info-card h3 {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+    
+    .info-grid .info-card .info-label {
+        font-size: 16px;
+        width: 150px;
+    }
+    
+    .info-grid .info-card .info-input {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+    
+    .producto-info {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .producto-img-area {
+        width: auto;
+        text-align: center;
+    }
+    
+    .producto-detalles {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .producto-linea-principal {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .producto-nombre-metodo-area {
+        min-width: auto;
+        width: 100%;
+    }
+    
+    .producto-stock-area {
+        justify-content: flex-start;
+        width: 100%;
+    }
+    
+    .comentarios-textarea {
+        min-height: 80px;
+    }
+    
+    .campos-edicion {
+        grid-template-columns: 1fr;
+    }
+    
+    .resultados-calculo {
+        grid-template-columns: 1fr;
+    }
+    
+    .producto-item {
+        transform: scale(1);
+        margin-bottom: 20px;
+    }
+    
+    .producto-comentarios-area {
+        margin-top: 5px;
+    }
+}
+
+/* ===== EFECTOS Y ANIMACIONES ===== */
+.campo-editable:focus {
+    animation: focusGlow 0.3s ease-in-out;
+}
+
+@keyframes focusGlow {
+    0% { 
+        box-shadow: 0 0 0 rgba(60, 96, 159, 0); 
+    }
+    100% { 
+        box-shadow: 0 0 5px rgba(60, 96, 159, 0.3); 
+    }
+}
+
+.producto-item:hover {
+    background: #fafbff;
+    transition: background 0.2s ease;
+}
+
+.btn:active {
+    transform: translateY(0);
+    transition: transform 0.1s;
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+    .acciones-footer,
+    .btn {
+        display: none !important;
+    }
+    
+    .cotizacion-container {
+        box-shadow: none;
+        margin: 0;
+        padding: 10px;
+    }
+    
+    .header-cotizacion {
+        background: #3c609f !important;
+        -webkit-print-color-adjust: exact;
+        color-adjust: exact;
+    }
+    
+    .producto-item {
+        page-break-inside: avoid;
+    }
+}
+
+/* ===== ESTILOS PARA ELIMINACIÓN DE PRODUCTOS ===== */
+
+/* Checkbox de eliminación */
+.eliminar-producto-checkbox {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 15px;
+    padding: 3px 8px;
+    border: 1px solid #dc3545;
+    border-radius: 4px;
+    background: #fff5f5;
+    font-size: 12px;
+    color: #dc3545;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.eliminar-producto-checkbox:hover {
+    background: #ffe6e6;
+    border-color: #c82333;
+}
+
+.eliminar-producto-checkbox input[type="checkbox"] {
+    margin: 0;
+    cursor: pointer;
+}
+
+.eliminar-producto-checkbox .eliminar-icono {
+    font-size: 14px;
+}
+
+.eliminar-producto-checkbox .eliminar-texto {
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* Producto marcado para eliminación */
+.producto-item.marcado-eliminacion {
+    position: relative;
+    opacity: 0.6;
+    background-color: #f8f9fa !important;
+    border-left: 4px solid #dc3545;
+    transition: all 0.3s ease;
+}
+
+.producto-item.marcado-eliminacion::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(220, 53, 69, 0.1) 10px,
+        rgba(220, 53, 69, 0.1) 20px
+    );
+    pointer-events: none;
+    z-index: 1;
+}
+
+.producto-item.marcado-eliminacion .producto-codigo,
+.producto-item.marcado-eliminacion .producto-nombre,
+.producto-item.marcado-eliminacion .producto-variante {
+    text-decoration: line-through;
+    color: #6c757d;
+}
+
+.producto-item.marcado-eliminacion .campos-edicion {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.producto-item.marcado-eliminacion .resultados-calculo {
+    opacity: 0.5;
+    background-color: #e9ecef !important;
+}
+
+/* Mensaje de confirmación de eliminación */
+.confirmacion-eliminacion {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    color: #856404;
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin-top: 8px;
+    font-size: 12px;
+    display: none;
+    align-items: center;
+    gap: 8px;
+}
+
+.confirmacion-eliminacion.mostrar {
+    display: flex;
+}
+
+.confirmacion-eliminacion .icono-advertencia {
+    font-size: 16px;
+    color: #856404;
+}
+
+/* Contador de productos eliminados */
+.contador-eliminados {
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Responsive para checkbox de eliminación */
+@media (max-width: 768px) {
+    .eliminar-producto-checkbox {
+        margin-left: 5px;
+        font-size: 11px;
+        padding: 2px 6px;
+    }
+    
+    .eliminar-producto-checkbox .eliminar-texto {
+        display: none;
+    }
+}
