@@ -1351,3 +1351,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// ===== PRUEBA DE SINCRONIZACIÓN CON GITHUB =====
+// Este comentario fue agregado para probar la sincronización con GitHub
+// Fecha: $(date)
